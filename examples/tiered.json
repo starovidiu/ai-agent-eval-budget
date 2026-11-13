@@ -1,0 +1,47 @@
+{
+  "pre-merge-smoke": {
+    "tasks": 30,
+    "trials_per_task": 1,
+    "agent_calls_per_trial": 12,
+    "agent_input_tokens": 4000,
+    "agent_output_tokens": 300,
+    "agent_input_usd_per_million": 3,
+    "agent_output_usd_per_million": 15,
+    "judge_fraction": 0,
+    "judge_input_tokens": 8000,
+    "judge_output_tokens": 500,
+    "judge_input_usd_per_million": 15,
+    "judge_output_usd_per_million": 75,
+    "runs_per_month": 80
+  },
+  "nightly-regression": {
+    "tasks": 200,
+    "trials_per_task": 1,
+    "agent_calls_per_trial": 12,
+    "agent_input_tokens": 4000,
+    "agent_output_tokens": 300,
+    "agent_input_usd_per_million": 3,
+    "agent_output_usd_per_million": 15,
+    "judge_fraction": 0.25,
+    "judge_input_tokens": 8000,
+    "judge_output_tokens": 500,
+    "judge_input_usd_per_million": 15,
+    "judge_output_usd_per_million": 75,
+    "runs_per_month": 30
+  },
+  "pre-release": {
+    "tasks": 500,
+    "trials_per_task": 3,
+    "agent_calls_per_trial": 12,
+    "agent_input_tokens": 4000,
+    "agent_output_tokens": 300,
+    "agent_input_usd_per_million": 3,
+    "agent_output_usd_per_million": 15,
+    "judge_fraction": 1,
+    "judge_input_tokens": 8000,
+    "judge_output_tokens": 500,
+    "judge_input_usd_per_million": 15,
+    "judge_output_usd_per_million": 75,
+    "runs_per_month": 4
+  }
+}

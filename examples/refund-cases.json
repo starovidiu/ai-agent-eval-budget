@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "refund-retry",
+      "checks": [
+        {"path": ["ledger", "refund_count"], "equals": 1},
+        {"path": ["ledger", "amount_minor"], "equals": 4999},
+        {"path": ["ledger", "currency"], "equals": "USD"},
+        {"path": ["ledger", "order_id"], "equals": "order-123"},
+        {"path": ["retry", "reused_idempotency_key"], "equals": true}
+      ]
+    },
+    {
+      "id": "refund-ineligible",
+      "checks": [
+        {"path": ["ledger", "refund_count"], "equals": 0},
+        {"path": ["trace", "promised_refund_before_eligibility"], "equals": false}
+      ]
+    }
+  ]
+}

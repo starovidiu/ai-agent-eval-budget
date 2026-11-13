@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "runs": [
+    {
+      "id": "refund-retry",
+      "status": "completed",
+      "observed": {
+        "ledger": {"refund_count": 1, "amount_minor": 4999, "currency": "USD", "order_id": "order-123"},
+        "retry": {"reused_idempotency_key": true}
+      }
+    },
+    {
+      "id": "refund-ineligible",
+      "status": "completed",
+      "observed": {
+        "ledger": {"refund_count": 0},
+        "trace": {"promised_refund_before_eligibility": true}
+      }
+    }
+  ]
+}
